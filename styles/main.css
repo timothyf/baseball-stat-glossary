@@ -25,6 +25,7 @@ nav {
     background-color: #fff;
     border-radius: 5px;
     max-width: 80%;
+    text-align: center;
 }
 .toc-container {
     display: flex;
@@ -120,10 +121,57 @@ ul li a.advanced:hover {
 }
 .search-container input {
     padding: 10px;
-    width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.search-container #search-input {
+    max-width: 150px;
+    min-width: 75px;
+    width: 100%;
+    padding: 5px;
+}
+
+.search-container #full-search-input {
+    width: 220px;
+    max-width: 220px;
+    min-width: 130px;
+    width: 100%;
+    padding: 5px;
+}
+
+#search-label {
+    margin-right: 0px;
+    margin-left: 12%;
+    font-weight: bold; 
+    margin-right: 10px;
+}
+
+#search-btn-div {
+    display: flex; 
+    gap: 10px;
+    width: 500px;
+}
+
+@media (max-width: 600px) { /* Adjust 600px to your desired breakpoint */
+    .search-container #search-input {
+        width: 75px; /* Forces the minimum width on narrow screens */
+    }
+    .search-container #full-search-input {
+        width: 130px; /* Forces the minimum width on narrow screens */
+    }
+    #search-label {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    #$search-label {
+        margin-left: 5px;
+    }
+
+
+
 footer {
     text-align: center;
     margin: 20px 0;
@@ -142,6 +190,10 @@ footer {
 
 .glossary button {
     margin-bottom: 10px;
+}
+
+#toc-nav button {
+    max-width: 80%;
 }
 
 .toc-category-container {

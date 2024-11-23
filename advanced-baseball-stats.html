@@ -2,19 +2,23 @@
 <html>
 <head>
 <title>Advanced Baseball Stats Glossary</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link rel='stylesheet' type='text/css' href='styles/main.css'>
 <script src='javascript/main.js'></script>
 </head>
 <body>
 <h1>Advanced Baseball Stats Glossary</h1>
-<div class='search-container'>
-<input type='text' id='search-input' placeholder='Search for a stat...'>
-</div>
-<div class='search-container'>
+<nav>
+<div class='search-container' style='display: flex; align-items: center; justify-content: space-between;'>
+<label id='search-label'>SEARCH</label>
+<div id='search-btn-div'>
+<input type='text' id='search-input' placeholder='Stat name...'>
 <input type='text' id='full-search-input' placeholder='Full text search...'>
 </div>
-<nav>
-<h2>Table of Contents</h2>
+</div>
+</nav>
+<nav id='toc-nav'>
+<h2>Stats by Category</h2>
 <button class='collapsible first standard'>Standard Stats</button>
 <div class='content'>
 <ul>
@@ -165,9 +169,9 @@
 <li><a href='#fast-swing-rate' class='advanced'>Fast-swing Rate</a></li>
 <li><a href='#hr-dis' class='advanced'>HR-DIS</a></li>
 <li><a href='#hard-hit-rate' class='advanced'>Hard-hit Rate</a></li>
-<li><a href='#iso' class='advanced'>ISO</a></li>
 </ul></div>
 <div class='toc-column'><ul>
+<li><a href='#iso' class='advanced'>ISO</a></li>
 <li><a href='#la' class='advanced'>LA</a></li>
 <li><a href='#lips' class='advanced'>LiPS</a></li>
 <li><a href='#o-swing' class='advanced'>O-Swing%</a></li>
@@ -176,12 +180,11 @@
 <li><a href='#ops+' class='advanced'>OPS+</a></li>
 <li><a href='#oppo' class='advanced'>Oppo%</a></li>
 <li><a href='#p-pa' class='advanced'>P/PA</a></li>
-<li><a href='#pa-so' class='advanced'>PA/SO</a></li>
-<li><a href='#pull' class='advanced'>Pull%</a></li>
 </ul></div>
 <div class='toc-column'><ul>
+<li><a href='#pa-so' class='advanced'>PA/SO</a></li>
+<li><a href='#pull' class='advanced'>Pull%</a></li>
 <li><a href='#rc' class='advanced'>RC</a></li>
-<li><a href='#slg' class='advanced'>SLG</a></li>
 <li><a href='#sweet-spot' class='advanced'>Sweet Spot</a></li>
 <li><a href='#swing-length' class='advanced'>Swing Length</a></li>
 <li><a href='#wraa' class='advanced'>wRAA</a></li>
@@ -198,8 +201,8 @@
 <li><a href='#bb-9' class='advanced'>BB/9</a></li>
 <li><a href='#cera' class='advanced'>CERA</a></li>
 <li><a href='#csw' class='advanced'>CSW%</a></li>
-<li><a href='#era' class='advanced'>ERA</a></li>
 <li><a href='#era+' class='advanced'>ERA+</a></li>
+<li><a href='#era-' class='advanced'>ERA-</a></li>
 <li><a href='#fip' class='advanced'>FIP</a></li>
 <li><a href='#fip-' class='advanced'>FIP-</a></li>
 <li><a href='#gb-fb' class='advanced'>GB/FB</a></li>
@@ -325,8 +328,10 @@
 </ul>
 </div>
 </nav>
+<nav>
+<h2>All Stats</h2>
 <div class='glossary'>
-<button class='collapsible standard' id='1b'>1B<span class='alt-name'>(Single)</span></button>
+<button class='collapsible standard' id='1b'>1B<span class='alt-name'>(Singles)</span></button>
 <div class='content'>
 <p>A hit that allows the batter to reach first base.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
@@ -340,7 +345,7 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='2b'>2B<span class='alt-name'>(Double)</span></button>
+<button class='collapsible standard' id='2b'>2B<span class='alt-name'>(Doubles)</span></button>
 <div class='content'>
 <p>A hit where the batter safely reaches second base.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
@@ -354,7 +359,7 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='3b'>3B<span class='alt-name'>(Triple)</span></button>
+<button class='collapsible standard' id='3b'>3B<span class='alt-name'>(Triples)</span></button>
 <div class='content'>
 <p>A hit that allows the batter to reach third base.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
@@ -383,7 +388,7 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> Moderate</p>
 </div>
-<button class='collapsible standard' id='a'>A<span class='alt-name'>(Assist)</span></button>
+<button class='collapsible standard' id='a'>A<span class='alt-name'>(Assists)</span></button>
 <div class='content'>
 <p>A fielder's contribution to a putout.</p>
 <p><strong>Applicable Roles:</strong> Fielders</p>
@@ -397,7 +402,7 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='ab'>AB<span class='alt-name'>(At-bat)</span></button>
+<button class='collapsible standard' id='ab'>AB<span class='alt-name'>(At-bats)</span></button>
 <div class='content'>
 <p>A completed batting appearance that does not result in a walk, hit-by-pitch, or sacrifice.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
@@ -427,7 +432,7 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> Moderate</p>
 </div>
-<button class='collapsible standard' id='app'>App<span class='alt-name'>(Appearance)</span></button>
+<button class='collapsible standard' id='app'>App<span class='alt-name'>(Appearances)</span></button>
 <div class='content'>
 <p>The number of games a pitcher appears in.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -560,6 +565,13 @@
 <p><strong>Sources:</strong> Baseball Savant, FanGraphs</p>
 <p><strong>Year Introduced:</strong> Unknown</p>
 <p><strong>Formula Complexity:</strong> Low</p>
+<p><strong>Excellent:</strong> 6.0% and below</p>
+<p><strong>Great:</strong> 6.1% – 7.0%</p>
+<p><strong>Above Avg:</strong> 7.1% – 8.0%</p>
+<p><strong>Avg:</strong> 8.1% – 9.0%</p>
+<p><strong>Below Avg:</strong> 9.1% – 10.0%</p>
+<p><strong>Poor:</strong> 10.1% – 11.0%</p>
+<p><strong>Awful:</strong> 11.1% and above</p>
 </div>
 <button class='collapsible advanced' id='bb-9'>BB/9<span class='alt-name'>(Walks per 9 Innings)</span></button>
 <div class='content'>
@@ -575,6 +587,13 @@
 <p><strong>Sources:</strong> Baseball Reference, MLB</p>
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
+<p><strong>Excellent:</strong> 1.5 and below</p>
+<p><strong>Great:</strong> 1.6 – 2.0</p>
+<p><strong>Above Avg:</strong> 2.1 – 2.5</p>
+<p><strong>Avg:</strong> 2.6 – 3.0</p>
+<p><strong>Below Avg:</strong> 3.1 – 3.5</p>
+<p><strong>Poor:</strong> 3.6 – 4.0</p>
+<p><strong>Awful:</strong> 4.1 and above</p>
 </div>
 <button class='collapsible advanced' id='bbe'>BBE<span class='alt-name'>(Batted Ball Event)</span></button>
 <div class='content'>
@@ -1022,6 +1041,11 @@
 <p><strong>Sources:</strong> Baseball Reference</p>
 <p><strong>Year Introduced:</strong> Unknown</p>
 <p><strong>Formula Complexity:</strong> Medium</p>
+</div>
+<button class='collapsible advanced' id='era-'>ERA-</button>
+<div class='content'>
+<p>nan</p>
+<p><strong>Applicable Roles:</strong> Pitchers</p>
 </div>
 <button class='collapsible advanced' id='ev'>EV<span class='alt-name'>(Exit Velocity)</span></button>
 <div class='content'>
@@ -1852,21 +1876,13 @@
 <p><strong>Sources:</strong> Baseball-Reference, FanGraphs</p>
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
-</div>
-<button class='collapsible standard' id='obp'>OBP<span class='alt-name'>(On-base Percentage)</span></button>
-<div class='content'>
-<p>Indicates how often a player reaches base via hits, walks, or hit-by-pitches.</p>
-<p><strong>Applicable Roles:</strong> Batters</p>
-<p><strong>Formula:</strong> (H + BB + HBP) ÷ (AB + BB + HBP + SF)</p>
-<p><strong>Use Cases:</strong> Evaluating a player's ability to get on base.</p>
-<p><strong>Advantages:</strong> Simple and widely used.</p>
-<p><strong>Limitations:</strong> Does not account for power.</p>
-<p><strong>Real-Life Examples:</strong> Identifying high-OBP players.</p>
-<p><strong>Visualization Methods:</strong> Pie charts, bar graphs</p>
-<p><strong>Creator:</strong> Traditional Statistic</p>
-<p><strong>Sources:</strong> MLB</p>
-<p><strong>Year Introduced:</strong> Early 1900s</p>
-<p><strong>Formula Complexity:</strong> Low</p>
+<p><strong>Excellent:</strong> .390 and above</p>
+<p><strong>Great:</strong> .370 – .389</p>
+<p><strong>Above Avg:</strong> .340 – .369</p>
+<p><strong>Avg:</strong> .320 – .339</p>
+<p><strong>Below Avg:</strong> .310 – .319</p>
+<p><strong>Poor:</strong> .300 – .309</p>
+<p><strong>Awful:</strong> .299 and below</p>
 </div>
 <button class='collapsible standard' id='ofa'>OFA<span class='alt-name'>(Outfield Assist)</span></button>
 <div class='content'>
@@ -1909,21 +1925,6 @@
 <p><strong>Visualization Methods:</strong> Bar graphs, heatmaps</p>
 <p><strong>Creator:</strong> Traditional Statistic</p>
 <p><strong>Sources:</strong> Baseball-Reference, FanGraphs</p>
-<p><strong>Year Introduced:</strong> 1980s</p>
-<p><strong>Formula Complexity:</strong> Low</p>
-</div>
-<button class='collapsible standard' id='ops'>OPS<span class='alt-name'>(On-base Plus Slugging)</span></button>
-<div class='content'>
-<p>Combines OBP and SLG to measure overall offensive productivity.</p>
-<p><strong>Applicable Roles:</strong> Batters</p>
-<p><strong>Formula:</strong> OBP + SLG</p>
-<p><strong>Use Cases:</strong> Measuring a player’s offensive value.</p>
-<p><strong>Advantages:</strong> Combines on-base and power stats.</p>
-<p><strong>Limitations:</strong> Treats OBP and SLG equally.</p>
-<p><strong>Real-Life Examples:</strong> Ranking players with high OPS values.</p>
-<p><strong>Visualization Methods:</strong> Bar graphs, heatmaps</p>
-<p><strong>Creator:</strong> Traditional Statistic</p>
-<p><strong>Sources:</strong> MLB</p>
 <p><strong>Year Introduced:</strong> 1980s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
@@ -2471,21 +2472,13 @@
 <p><strong>Sources:</strong> Baseball-Reference, FanGraphs</p>
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
-</div>
-<button class='collapsible standard' id='slg'>SLG<span class='alt-name'>(Slugging Percentage)</span></button>
-<div class='content'>
-<p>Measures power by weighting different hit types.</p>
-<p><strong>Applicable Roles:</strong> Batters</p>
-<p><strong>Formula:</strong> (1B + 2 × 2B + 3 × 3B + 4 × HR) ÷ AB</p>
-<p><strong>Use Cases:</strong> Measuring a player’s power contribution.</p>
-<p><strong>Advantages:</strong> Reflects power hitting.</p>
-<p><strong>Limitations:</strong> Overvalues extra-base hits.</p>
-<p><strong>Real-Life Examples:</strong> Ranking top power hitters in a season.</p>
-<p><strong>Visualization Methods:</strong> Line graphs, scatter plots</p>
-<p><strong>Creator:</strong> Traditional Statistic</p>
-<p><strong>Sources:</strong> MLB</p>
-<p><strong>Year Introduced:</strong> Early 1900s</p>
-<p><strong>Formula Complexity:</strong> Low</p>
+<p><strong>Excellent:</strong> .550 and above</p>
+<p><strong>Great:</strong> .500 – .549</p>
+<p><strong>Above Avg:</strong> .450 – .499</p>
+<p><strong>Avg:</strong> .400 – .449</p>
+<p><strong>Below Avg:</strong> .350 – .399</p>
+<p><strong>Poor:</strong> .300 – .349</p>
+<p><strong>Awful:</strong> .299 and below</p>
 </div>
 <button class='collapsible standard' id='so'>SO<span class='alt-name'>(Strikeout, K)</span></button>
 <div class='content'>
@@ -2519,7 +2512,7 @@
 </div>
 <button class='collapsible advanced' id='spin-rate'>Spin Rate</button>
 <div class='content'>
-<p>The rate of spin of a pitched ball, measured in revolutions per minute (RPM).</p>
+<p>Below </p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
 <p><strong>Formula:</strong> Measured using advanced tracking tools</p>
 <p><strong>Use Cases:</strong> Used to evaluate pitch effectiveness, especially breaking pitches.</p>

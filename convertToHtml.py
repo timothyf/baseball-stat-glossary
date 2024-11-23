@@ -30,6 +30,7 @@ def write_html_header(file):
     Writes the HTML header section.
     """
     file.write("<!DOCTYPE html>\n<html>\n<head>\n<title>Advanced Baseball Stats Glossary</title>\n")
+    file.write("<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n")
     file.write(f"<link rel='stylesheet' type='text/css' href='{CSS_FILE_PATH}'>\n")
     file.write(f"<script src='{JS_FILE_PATH}'></script>\n")
     file.write("</head>\n<body>\n")
@@ -37,22 +38,23 @@ def write_html_header(file):
 
 def write_search_bar(file):
     """
-    Writes the search bar section.
+    Writes the search bar section with "SEARCH" label on the left and two search boxes on the right.
     """
-    file.write("<div class='search-container'>\n")
-    file.write("<input type='text' id='search-input' placeholder='Search for a stat...'>\n")
-    file.write("</div>\n")
-
-    file.write("<div class='search-container'>\n")
+    file.write("<nav>\n<div class='search-container' style='display: flex; align-items: center; justify-content: space-between;'>\n")
+    file.write("<label id='search-label'>SEARCH</label>\n")
+    file.write("<div id='search-btn-div'>\n")
+    file.write("<input type='text' id='search-input' placeholder='Stat name...'>\n")
     file.write("<input type='text' id='full-search-input' placeholder='Full text search...'>\n")
     file.write("</div>\n")
+    file.write("</div>\n</nav>\n")
+
 
 def write_table_of_contents(file, standard_categories, advanced_categories):
     """
     Writes the Table of Contents with two levels of hierarchy and up to 4 columns for stats within each category.
     Each column can have a maximum of 10 entries.
     """
-    file.write("<nav>\n<h2>Table of Contents</h2>\n")
+    file.write("<nav id='toc-nav'>\n<h2>Stats by Category</h2>\n")
     
     # Top-level "Standard Stats" section
     file.write("<button class='collapsible first standard'>Standard Stats</button>\n")
@@ -124,6 +126,7 @@ def write_glossary_sections(file, df, standard_categories, advanced_categories):
     advanced_stats = set(stat for category in advanced_categories.values() for stat in category)
     standard_stats = set(stat for category in standard_categories.values() for stat in category)
 
+    file.write("<nav>\n<h2>All Stats</h2>\n")
     file.write("<div class='glossary'>\n")
     for _, row in df.iterrows():
         stat_anchor = slugify(row['Stat'])

@@ -14,11 +14,11 @@ standard_categories = {
 
 advanced_categories = {
     "General Stats": ["WAR", "bWAR", "fWAR", "wOBA"],
-    "Batting Stats": ["Oppo%", "O-Swing%", "LA", "HR-DIS", "Fast-swing Rate", "Contact%", "OBP", "SLG", 
+    "Batting Stats": ["Oppo%", "O-Swing%", "LA", "HR-DIS", "Fast-swing Rate", "Contact%", "OBP", 
                       "OPS", "OPS+", "ISO", "BABIP", "xBA", "Barrel", "Barrel%", "Blasts", "Hard-hit Rate",
                       "Sweet Spot", "EV", "LiPS", "Swing Length", "P/PA", "PA/SO", "Pull%", "RC", "wRAA",
                       "wRC+", "xSLG"],
-    "Pitching Stats": ["K-BB%", "K%", "IR-A", "H/9", "HR/9", "GB/FB", "Game Score", "ERA+", "BB/9", "ERA", 
+    "Pitching Stats": ["K-BB%", "K%", "IR-A", "H/9", "HR/9", "GB/FB", "Game Score", "ERA+", "ERA-", "BB/9", 
                        "xERA", "FIP", "xFIP", "FIP-", "CERA", "HR/FB", "K/BB", "K/9", "BB%", "CSW%", "VELO", 
                        "SIERA", "tERA", "MB/9", "Spin Rate", "Pitch Tempo", "Pitch Movement", 
                        "LiPS", "P/GS", "P/IP", "Putaway %", "RA9", "SwStr%"],
