@@ -29,12 +29,12 @@ def write_html_header(file):
     """
     Writes the HTML header section.
     """
-    file.write("<!DOCTYPE html>\n<html>\n<head>\n<title>Advanced Baseball Stats Glossary</title>\n")
+    file.write("<!DOCTYPE html>\n<html>\n<head>\n<title>Baseball Stats</title>\n")
     file.write("<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n")
     file.write(f"<link rel='stylesheet' type='text/css' href='{CSS_FILE_PATH}'>\n")
     file.write(f"<script src='{JS_FILE_PATH}'></script>\n")
     file.write("</head>\n<body>\n")
-    file.write("<h1>Advanced Baseball Stats Glossary</h1>\n")
+    file.write("<h1>Baseball Stats</h1>\n")
 
 def write_search_bar(file):
     """
