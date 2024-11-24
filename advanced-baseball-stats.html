@@ -333,8 +333,9 @@
 <div class='glossary'>
 <button class='collapsible standard' id='1b'>1B<span class='alt-name'>(Singles)</span></button>
 <div class='content'>
-<p>A hit that allows the batter to reach first base.</p>
+<p>A base hit in which the batter safely reaches first base without any errors, fielder's choices, or other advancements caused by the defensive team's actions.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of the # of singles</p>
 <p><strong>Use Cases:</strong> Evaluating base-hit ability.</p>
 <p><strong>Advantages:</strong> Simple and widely used.</p>
 <p><strong>Limitations:</strong> Does not account for power.</p>
@@ -347,8 +348,9 @@
 </div>
 <button class='collapsible standard' id='2b'>2B<span class='alt-name'>(Doubles)</span></button>
 <div class='content'>
-<p>A hit where the batter safely reaches second base.</p>
+<p>A base hit in which the batter safely reaches second base without any errors, fielder's choices, or other defensive misplays.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of the # of doubles</p>
 <p><strong>Use Cases:</strong> Measuring extra-base hit ability.</p>
 <p><strong>Advantages:</strong> Simple and valuable measure.</p>
 <p><strong>Limitations:</strong> Does not capture full offensive value.</p>
@@ -361,8 +363,9 @@
 </div>
 <button class='collapsible standard' id='3b'>3B<span class='alt-name'>(Triples)</span></button>
 <div class='content'>
-<p>A hit that allows the batter to reach third base.</p>
+<p>A base hit in which the batter safely reaches third base without any errors, fielder's choices, or other defensive misplays.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of the # of triples</p>
 <p><strong>Use Cases:</strong> Evaluating speed and power combined.</p>
 <p><strong>Advantages:</strong> Reflects hitting for extra bases.</p>
 <p><strong>Limitations:</strong> Rare and situational.</p>
@@ -392,6 +395,7 @@
 <div class='content'>
 <p>A fielder's contribution to a putout.</p>
 <p><strong>Applicable Roles:</strong> Fielders</p>
+<p><strong>Formula:</strong> Count of the number of assists</p>
 <p><strong>Use Cases:</strong> Evaluating defensive involvement.</p>
 <p><strong>Advantages:</strong> Highlights defensive plays.</p>
 <p><strong>Limitations:</strong> Does not account for errors.</p>
@@ -464,7 +468,7 @@
 </div>
 <button class='collapsible standard' id='avg'>AVG<span class='alt-name'>(Batting Average)</span></button>
 <div class='content'>
-<p>Measures how often a batter gets a hit per at-bat.</p>
+<p>Batting Average (AVG) is a statistic that measures a batter's success rate in achieving hits during official at-bats. It is calculated as the number of hits divided by the number of at-bats.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
 <p><strong>Formula:</strong> H ÷ AB</p>
 <p><strong>Use Cases:</strong> Evaluating a batter's hitting efficiency.</p>
@@ -537,10 +541,11 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> Medium</p>
 </div>
-<button class='collapsible standard' id='bb'>BB<span class='alt-name'>(Walk)</span></button>
+<button class='collapsible standard' id='bb'>BB<span class='alt-name'>(Walks)</span></button>
 <div class='content'>
 <p>When a batter is awarded first base due to four balls.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of the # of walks</p>
 <p><strong>Use Cases:</strong> Evaluating plate discipline.</p>
 <p><strong>Advantages:</strong> Reflects patience at the plate.</p>
 <p><strong>Limitations:</strong> Ignores power or contact ability.</p>
@@ -565,13 +570,20 @@
 <p><strong>Sources:</strong> Baseball Savant, FanGraphs</p>
 <p><strong>Year Introduced:</strong> Unknown</p>
 <p><strong>Formula Complexity:</strong> Low</p>
-<p><strong>Excellent:</strong> 6.0% and below</p>
-<p><strong>Great:</strong> 6.1% – 7.0%</p>
-<p><strong>Above Avg:</strong> 7.1% – 8.0%</p>
-<p><strong>Avg:</strong> 8.1% – 9.0%</p>
-<p><strong>Below Avg:</strong> 9.1% – 10.0%</p>
-<p><strong>Poor:</strong> 10.1% – 11.0%</p>
-<p><strong>Awful:</strong> 11.1% and above</p>
+<p><strong>Batter Excellent:</strong> 6.0% and below</p>
+<p><strong>Batter Great:</strong> 6.1% – 7.0%</p>
+<p><strong>Batter Above Avg:</strong> 7.1% – 8.0%</p>
+<p><strong>Batter Avg:</strong> 8.1% – 9.0%</p>
+<p><strong>Batter Below Avg:</strong> 9.1% – 10.0%</p>
+<p><strong>Batter Poor:</strong> 10.1% – 11.0%</p>
+<p><strong>Batter Awful:</strong> 11.1% and above</p>
+<p><strong>Pitcher Excellent:</strong> 6.0% and below</p>
+<p><strong>Pitcher Great:</strong> 6.1% – 7.0%</p>
+<p><strong>Pitcher Above Avg:</strong> 7.1% – 8.0%</p>
+<p><strong>Pitcher Avg:</strong> 8.1% – 9.0%</p>
+<p><strong>Pitcher Below Avg:</strong> 9.1% – 10.0%</p>
+<p><strong>Pitcher Poor:</strong> 10.1% – 11.0%</p>
+<p><strong>Pitcher Awful:</strong> 11.1% and above</p>
 </div>
 <button class='collapsible advanced' id='bb-9'>BB/9<span class='alt-name'>(Walks per 9 Innings)</span></button>
 <div class='content'>
@@ -587,13 +599,20 @@
 <p><strong>Sources:</strong> Baseball Reference, MLB</p>
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
-<p><strong>Excellent:</strong> 1.5 and below</p>
-<p><strong>Great:</strong> 1.6 – 2.0</p>
-<p><strong>Above Avg:</strong> 2.1 – 2.5</p>
-<p><strong>Avg:</strong> 2.6 – 3.0</p>
-<p><strong>Below Avg:</strong> 3.1 – 3.5</p>
-<p><strong>Poor:</strong> 3.6 – 4.0</p>
-<p><strong>Awful:</strong> 4.1 and above</p>
+<p><strong>Batter Excellent:</strong> 1.5 and below</p>
+<p><strong>Batter Great:</strong> 1.6 – 2.0</p>
+<p><strong>Batter Above Avg:</strong> 2.1 – 2.5</p>
+<p><strong>Batter Avg:</strong> 2.6 – 3.0</p>
+<p><strong>Batter Below Avg:</strong> 3.1 – 3.5</p>
+<p><strong>Batter Poor:</strong> 3.6 – 4.0</p>
+<p><strong>Batter Awful:</strong> 4.1 and above</p>
+<p><strong>Pitcher Excellent:</strong> 1.5 and below</p>
+<p><strong>Pitcher Great:</strong> 1.6 – 2.0</p>
+<p><strong>Pitcher Above Avg:</strong> 2.1 – 2.5</p>
+<p><strong>Pitcher Avg:</strong> 2.6 – 3.0</p>
+<p><strong>Pitcher Below Avg:</strong> 3.1 – 3.5</p>
+<p><strong>Pitcher Poor:</strong> 3.6 – 4.0</p>
+<p><strong>Pitcher Awful:</strong> 4.1 and above</p>
 </div>
 <button class='collapsible advanced' id='bbe'>BBE<span class='alt-name'>(Batted Ball Event)</span></button>
 <div class='content'>
@@ -839,6 +858,7 @@
 <div class='content'>
 <p>Number of times a runner is thrown out attempting to steal a base.</p>
 <p><strong>Applicable Roles:</strong> Runners</p>
+<p><strong>Formula:</strong> Count of the # of times a runner is caught stealing.</p>
 <p><strong>Use Cases:</strong> Evaluating baserunning aggressiveness.</p>
 <p><strong>Advantages:</strong> Highlights baserunning risks.</p>
 <p><strong>Limitations:</strong> Context not considered.</p>
@@ -939,10 +959,11 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='dp'>DP<span class='alt-name'>(Double Play)</span></button>
+<button class='collapsible standard' id='dp'>DP<span class='alt-name'>(Double Plays)</span></button>
 <div class='content'>
 <p>A defensive play resulting in two outs.</p>
 <p><strong>Applicable Roles:</strong> Fielders</p>
+<p><strong>Formula:</strong> Count of the # of double plays executed.</p>
 <p><strong>Use Cases:</strong> Evaluating team defensive efficiency.</p>
 <p><strong>Advantages:</strong> Highlights infield coordination.</p>
 <p><strong>Limitations:</strong> Rare and situational.</p>
@@ -983,10 +1004,11 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='e'>E<span class='alt-name'>(Error)</span></button>
+<button class='collapsible standard' id='e'>E<span class='alt-name'>(Errors)</span></button>
 <div class='content'>
 <p>A defensive misplay allowing a runner to advance or reach base.</p>
 <p><strong>Applicable Roles:</strong> Fielders</p>
+<p><strong>Formula:</strong> Count of the # of errors by a fielder</p>
 <p><strong>Use Cases:</strong> Measuring defensive lapses.</p>
 <p><strong>Advantages:</strong> Identifies mistakes.</p>
 <p><strong>Limitations:</strong> Subjective scoring decisions.</p>
@@ -997,7 +1019,7 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='er'>ER<span class='alt-name'>(Earned Run)</span></button>
+<button class='collapsible standard' id='er'>ER<span class='alt-name'>(Earned Runs)</span></button>
 <div class='content'>
 <p>Runs scored against a pitcher that are not due to errors or passed balls.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -1041,6 +1063,20 @@
 <p><strong>Sources:</strong> Baseball Reference</p>
 <p><strong>Year Introduced:</strong> Unknown</p>
 <p><strong>Formula Complexity:</strong> Medium</p>
+<p><strong>Batter Excellent:</strong> 170 and above</p>
+<p><strong>Batter Great:</strong> 150 – 169</p>
+<p><strong>Batter Above Avg:</strong> 130 – 149</p>
+<p><strong>Batter Avg:</strong> 100 – 129</p>
+<p><strong>Batter Below Avg:</strong> 80 – 99</p>
+<p><strong>Batter Poor:</strong> 60 – 79</p>
+<p><strong>Batter Awful:</strong> 59 and below</p>
+<p><strong>Pitcher Excellent:</strong> 170 and above</p>
+<p><strong>Pitcher Great:</strong> 150 – 169</p>
+<p><strong>Pitcher Above Avg:</strong> 130 – 149</p>
+<p><strong>Pitcher Avg:</strong> 100 – 129</p>
+<p><strong>Pitcher Below Avg:</strong> 80 – 99</p>
+<p><strong>Pitcher Poor:</strong> 60 – 79</p>
+<p><strong>Pitcher Awful:</strong> 59 and below</p>
 </div>
 <button class='collapsible advanced' id='era-'>ERA-</button>
 <div class='content'>
@@ -1290,6 +1326,7 @@
 <div class='content'>
 <p>A ground ball resulting in two outs.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of the # of times a batter has grouned into a double play.</p>
 <p><strong>Use Cases:</strong> Measuring negative offensive outcomes.</p>
 <p><strong>Advantages:</strong> Highlights situational challenges.</p>
 <p><strong>Limitations:</strong> Context-dependent.</p>
@@ -1345,10 +1382,11 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='gsh'>GSH<span class='alt-name'>(Grand Slam)</span></button>
+<button class='collapsible standard' id='gsh'>GSH<span class='alt-name'>(Grand Slams)</span></button>
 <div class='content'>
 <p>A home run hit with the bases loaded.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of a batter's Grand Slams</p>
 <p><strong>Use Cases:</strong> Highlighting clutch hitting ability.</p>
 <p><strong>Advantages:</strong> Exciting offensive stat.</p>
 <p><strong>Limitations:</strong> Rare and situational.</p>
@@ -1359,10 +1397,11 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='h'>H<span class='alt-name'>(Hit)</span></button>
+<button class='collapsible standard' id='h'>H<span class='alt-name'>(Hits  )</span></button>
 <div class='content'>
-<p>A successful strike resulting in the batter reaching base.</p>
+<p>A measure of how many times a batter safely reaches base by hitting the ball into play, without the aid of an error or fielder's choice. Hits can be categorized into singles, doubles, triples, and home runs.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of a batter's Hits.</p>
 <p><strong>Use Cases:</strong> Measuring batting success.</p>
 <p><strong>Advantages:</strong> Simple and universal.</p>
 <p><strong>Limitations:</strong> Does not measure power or context.</p>
@@ -1405,8 +1444,9 @@
 </div>
 <button class='collapsible standard' id='hbp'>HBP<span class='alt-name'>(Hit-by-pitch)</span></button>
 <div class='content'>
-<p>Times a batter is hit by a pitch.</p>
+<p>A Hit By Pitch (HBP) occurs when a batter is struck by a pitched ball without swinging at it, and the batter is awarded first base as a result.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of a batter's HBP</p>
 <p><strong>Use Cases:</strong> Evaluating player toughness and on-base rate.</p>
 <p><strong>Advantages:</strong> Adds value to OBP.</p>
 <p><strong>Limitations:</strong> Rare and potentially dangerous.</p>
@@ -1447,10 +1487,11 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='hr'>HR<span class='alt-name'>(Home Run)</span></button>
+<button class='collapsible standard' id='hr'>HR<span class='alt-name'>(Home Runs)</span></button>
 <div class='content'>
-<p>A hit that results in the batter circling all bases.</p>
+<p>A home run is a hit in which the batter rounds all the bases and scores, along with any runners on base, without being put out or the benefit of a defensive error.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
+<p><strong>Formula:</strong> Count of a batter's home runs.</p>
 <p><strong>Use Cases:</strong> Measuring power and offensive production.</p>
 <p><strong>Advantages:</strong> Highlights top power hitters.</p>
 <p><strong>Limitations:</strong> Ignores situational importance.</p>
@@ -1669,7 +1710,7 @@
 <p><strong>Year Introduced:</strong> Not Widely Established</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='l'>L<span class='alt-name'>(Loss)</span></button>
+<button class='collapsible standard' id='l'>L<span class='alt-name'>(Losses)</span></button>
 <div class='content'>
 <p>A game in which a pitcher is charged with a loss.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -1818,7 +1859,7 @@
 <p><strong>Year Introduced:</strong> Mid-1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='o'>O<span class='alt-name'>(Out)</span></button>
+<button class='collapsible standard' id='o'>O<span class='alt-name'>(Outs)</span></button>
 <div class='content'>
 <p>A defensive action that results in a batter or runner being put out.</p>
 <p><strong>Applicable Roles:</strong> Fielders</p>
@@ -1876,13 +1917,20 @@
 <p><strong>Sources:</strong> Baseball-Reference, FanGraphs</p>
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
-<p><strong>Excellent:</strong> .390 and above</p>
-<p><strong>Great:</strong> .370 – .389</p>
-<p><strong>Above Avg:</strong> .340 – .369</p>
-<p><strong>Avg:</strong> .320 – .339</p>
-<p><strong>Below Avg:</strong> .310 – .319</p>
-<p><strong>Poor:</strong> .300 – .309</p>
-<p><strong>Awful:</strong> .299 and below</p>
+<p><strong>Batter Excellent:</strong> .390 and above</p>
+<p><strong>Batter Great:</strong> .370 – .389</p>
+<p><strong>Batter Above Avg:</strong> .340 – .369</p>
+<p><strong>Batter Avg:</strong> .320 – .339</p>
+<p><strong>Batter Below Avg:</strong> .310 – .319</p>
+<p><strong>Batter Poor:</strong> .300 – .309</p>
+<p><strong>Batter Awful:</strong> .299 and below</p>
+<p><strong>Pitcher Excellent:</strong> .390 and above</p>
+<p><strong>Pitcher Great:</strong> .370 – .389</p>
+<p><strong>Pitcher Above Avg:</strong> .340 – .369</p>
+<p><strong>Pitcher Avg:</strong> .320 – .339</p>
+<p><strong>Pitcher Below Avg:</strong> .310 – .319</p>
+<p><strong>Pitcher Poor:</strong> .300 – .309</p>
+<p><strong>Pitcher Awful:</strong> .299 and below</p>
 </div>
 <button class='collapsible standard' id='ofa'>OFA<span class='alt-name'>(Outfield Assist)</span></button>
 <div class='content'>
@@ -1988,7 +2036,7 @@
 <p><strong>Year Introduced:</strong> Unknown</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='pa'>PA<span class='alt-name'>(Plate Appearance)</span></button>
+<button class='collapsible standard' id='pa'>PA<span class='alt-name'>(Plate Appearances)</span></button>
 <div class='content'>
 <p>A completed turn at bat, including hits, walks, and outs.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>
@@ -2017,7 +2065,7 @@
 <p><strong>Year Introduced:</strong> Unknown</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='pb'>PB<span class='alt-name'>(Passed Ball)</span></button>
+<button class='collapsible standard' id='pb'>PB<span class='alt-name'>(Passed Balls)</span></button>
 <div class='content'>
 <p>A pitch that gets past the catcher and allows runners to advance.</p>
 <p><strong>Applicable Roles:</strong> Catchers</p>
@@ -2180,7 +2228,7 @@
 <p><strong>Year Introduced:</strong> 1980s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='qs'>QS<span class='alt-name'>(Quality Start)</span></button>
+<button class='collapsible standard' id='qs'>QS<span class='alt-name'>(Quality Starts)</span></button>
 <div class='content'>
 <p>A start in which a pitcher completes at least six innings and allows three or fewer earned runs.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2195,7 +2243,7 @@
 <p><strong>Year Introduced:</strong> 1985</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='r'>R<span class='alt-name'>(Run)</span></button>
+<button class='collapsible standard' id='r'>R<span class='alt-name'>(Runs)</span></button>
 <div class='content'>
 <p>A player scores by safely crossing home plate.</p>
 <p><strong>Applicable Roles:</strong> Batters, Teams</p>
@@ -2341,7 +2389,7 @@
 <p><strong>Year Introduced:</strong> Not Widely Established</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='rw'>RW<span class='alt-name'>(Relief Win)</span></button>
+<button class='collapsible standard' id='rw'>RW<span class='alt-name'>(Relief Wins)</span></button>
 <div class='content'>
 <p>A win awarded to a reliever who enters the game in a non-starting role.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2356,7 +2404,7 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='sb'>SB<span class='alt-name'>(Stolen Base)</span></button>
+<button class='collapsible standard' id='sb'>SB<span class='alt-name'>(Stolen Bases)</span></button>
 <div class='content'>
 <p>When a runner advances a base without a hit.</p>
 <p><strong>Applicable Roles:</strong> Runners</p>
@@ -2428,7 +2476,7 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='sho'>SHO<span class='alt-name'>(Shutout)</span></button>
+<button class='collapsible standard' id='sho'>SHO<span class='alt-name'>(Shutouts)</span></button>
 <div class='content'>
 <p>A complete game in which the pitcher allows no runs.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2472,13 +2520,20 @@
 <p><strong>Sources:</strong> Baseball-Reference, FanGraphs</p>
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
-<p><strong>Excellent:</strong> .550 and above</p>
-<p><strong>Great:</strong> .500 – .549</p>
-<p><strong>Above Avg:</strong> .450 – .499</p>
-<p><strong>Avg:</strong> .400 – .449</p>
-<p><strong>Below Avg:</strong> .350 – .399</p>
-<p><strong>Poor:</strong> .300 – .349</p>
-<p><strong>Awful:</strong> .299 and below</p>
+<p><strong>Batter Excellent:</strong> .550 and above</p>
+<p><strong>Batter Great:</strong> .500 – .549</p>
+<p><strong>Batter Above Avg:</strong> .450 – .499</p>
+<p><strong>Batter Avg:</strong> .400 – .449</p>
+<p><strong>Batter Below Avg:</strong> .350 – .399</p>
+<p><strong>Batter Poor:</strong> .300 – .349</p>
+<p><strong>Batter Awful:</strong> .299 and below</p>
+<p><strong>Pitcher Excellent:</strong> .550 and above</p>
+<p><strong>Pitcher Great:</strong> .500 – .549</p>
+<p><strong>Pitcher Above Avg:</strong> .450 – .499</p>
+<p><strong>Pitcher Avg:</strong> .400 – .449</p>
+<p><strong>Pitcher Below Avg:</strong> .350 – .399</p>
+<p><strong>Pitcher Poor:</strong> .300 – .349</p>
+<p><strong>Pitcher Awful:</strong> .299 and below</p>
 </div>
 <button class='collapsible standard' id='so'>SO<span class='alt-name'>(Strikeout, K)</span></button>
 <div class='content'>
@@ -2570,7 +2625,7 @@
 <p><strong>Year Introduced:</strong> 2010</p>
 <p><strong>Formula Complexity:</strong> Medium</p>
 </div>
-<button class='collapsible standard' id='sv'>SV<span class='alt-name'>(Save)</span></button>
+<button class='collapsible standard' id='sv'>SV<span class='alt-name'>(Saves)</span></button>
 <div class='content'>
 <p>Awarded to a pitcher who preserves a win while meeting specific conditions.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2600,7 +2655,7 @@
 <p><strong>Year Introduced:</strong> 1969</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='svo'>SVO<span class='alt-name'>(Save Opportunity)</span></button>
+<button class='collapsible standard' id='svo'>SVO<span class='alt-name'>(Save Opportunities)</span></button>
 <div class='content'>
 <p>Tracks every instance in which a pitcher has a chance to earn a save.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2748,7 +2803,7 @@
 <p><strong>Year Introduced:</strong> Early 1900s</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='uer'>UER<span class='alt-name'>(Unearned Run)</span></button>
+<button class='collapsible standard' id='uer'>UER<span class='alt-name'>(Unearned Runs)</span></button>
 <div class='content'>
 <p>A run scored due to an error or passed ball.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2793,7 +2848,7 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> Low</p>
 </div>
-<button class='collapsible standard' id='w'>W<span class='alt-name'>(Win)</span></button>
+<button class='collapsible standard' id='w'>W<span class='alt-name'>(Wins)</span></button>
 <div class='content'>
 <p>Awarded to a pitcher on the winning team who meets certain conditions.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2852,6 +2907,20 @@
 <p><strong>Sources:</strong> MLB</p>
 <p><strong>Year Introduced:</strong> 1979</p>
 <p><strong>Formula Complexity:</strong> Low</p>
+<p><strong>Batter Excellent:</strong> 1.00 and below</p>
+<p><strong>Batter Great:</strong> 1.01 – 1.10</p>
+<p><strong>Batter Above Avg:</strong> 1.11 – 1.20</p>
+<p><strong>Batter Avg:</strong> 1.21 – 1.30</p>
+<p><strong>Batter Below Avg:</strong> 1.31 – 1.40</p>
+<p><strong>Batter Poor:</strong> 1.41 – 1.50</p>
+<p><strong>Batter Awful:</strong> 1.51 and above</p>
+<p><strong>Pitcher Excellent:</strong> 1.00 and below</p>
+<p><strong>Pitcher Great:</strong> 1.01 – 1.10</p>
+<p><strong>Pitcher Above Avg:</strong> 1.11 – 1.20</p>
+<p><strong>Pitcher Avg:</strong> 1.21 – 1.30</p>
+<p><strong>Pitcher Below Avg:</strong> 1.31 – 1.40</p>
+<p><strong>Pitcher Poor:</strong> 1.41 – 1.50</p>
+<p><strong>Pitcher Awful:</strong> 1.51 and above</p>
 </div>
 <button class='collapsible standard' id='wo'>WO<span class='alt-name'>(Walk-off)</span></button>
 <div class='content'>
@@ -2882,7 +2951,7 @@
 <p><strong>Year Introduced:</strong> 2007</p>
 <p><strong>Formula Complexity:</strong> Medium</p>
 </div>
-<button class='collapsible standard' id='wp'>WP<span class='alt-name'>(Wild Pitch)</span></button>
+<button class='collapsible standard' id='wp'>WP<span class='alt-name'>(Wild Pitches)</span></button>
 <div class='content'>
 <p>A pitch that the catcher cannot catch, allowing baserunners to advance.</p>
 <p><strong>Applicable Roles:</strong> Pitchers</p>
@@ -2972,7 +3041,7 @@
 <p><strong>Year Introduced:</strong> 2015</p>
 <p><strong>Formula Complexity:</strong> High</p>
 </div>
-<button class='collapsible standard' id='xbh'>XBH<span class='alt-name'>(Extra-base Hit)</span></button>
+<button class='collapsible standard' id='xbh'>XBH<span class='alt-name'>(Extra-base Hits)</span></button>
 <div class='content'>
 <p>Any hit that is a double, triple, or home run.</p>
 <p><strong>Applicable Roles:</strong> Batters</p>

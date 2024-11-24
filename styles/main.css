@@ -110,6 +110,10 @@ ul li a.advanced:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 5px;
+    text-align: left;
+}
+#toc-nav .content {
+    text-align: center;
 }
 .content p {
     margin: 10px 0;
